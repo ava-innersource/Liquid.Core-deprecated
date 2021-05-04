@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.Serialization;
 using Liquid.Core.Exceptions;
 
 namespace Liquid.Core.Localization
@@ -8,6 +9,7 @@ namespace Liquid.Core.Localization
     /// Occurs when it's not possible to read a resource.
     /// </summary>
     /// <seealso cref="System.Exception" />
+    [Serializable]
     [ExcludeFromCodeCoverage]
     public class LocalizationException : LightException
     {
@@ -17,6 +19,11 @@ namespace Liquid.Core.Localization
         /// <param name="key">The key.</param>
         /// <param name="innerException">The inner exception.</param>
         public LocalizationException(string key, Exception innerException) : base($"Unable to read resource from key: {key}, please see inner exception.", innerException)
+        {
+        }
+
+        ///<inheritdoc/>
+        protected LocalizationException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
     }
