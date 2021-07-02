@@ -10,27 +10,21 @@ namespace Liquid.Core.Interfaces
     public interface ILiquidContextNotifications
     {
         /// <summary>
-        /// Global context service.
+        /// Add or update a notification message.
         /// </summary>
-        ILiquidContext context { get; }
-
-        /// <summary>
-        /// Add or update a notification.
-        /// </summary>
-        /// <param name="key">Key of message.</param>
-        /// <param name="value">Notification message.</param>
-        void UpsertNotification(string key, object value);
+        /// <param name="message">Message text.</param>
+        void InsertNotification(string message);
 
         /// <summary>
         /// Add or update notifications list on context.
         /// </summary>
-        /// <param name="notifications">Notifications list.</param>
-        void UpsertNotifications(IDictionary<string, object> notifications);
+        /// <param name="notifications">Notification messages list.</param>
+        void InsertNotifications(IList<string> notifications);
 
         /// <summary>
-        /// Gets notifications that exist in the global context.
+        /// Gets notification messages that exist in the global context.
         /// </summary>
-        IDictionary<string, object> GetNotifications();
+        IList<string> GetNotifications();
     }
 
 }
