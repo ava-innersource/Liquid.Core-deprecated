@@ -1,7 +1,6 @@
 ﻿using Liquid.Core.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Liquid.Core.Implementations
 {
@@ -47,7 +46,7 @@ namespace Liquid.Core.Implementations
             }
             catch
             {
-                return null;
+                return default;
             }
         }
     }
