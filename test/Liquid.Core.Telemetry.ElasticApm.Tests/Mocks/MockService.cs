@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Liquid.Core.UnitTests.Mocks
+namespace Liquid.Core.Telemetry.ElasticApm.Tests.Mocks
 {
     public class MockService : IMockService
     {
