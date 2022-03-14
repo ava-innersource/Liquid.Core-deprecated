@@ -1,3 +1,7 @@
+# DEPRECATED [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+**This repo is no longer supported and will not receive any updates nor bug fixes, This code has been moved to the [main Liquid repository](https://github.com/Avanade/Liquid-Application-Framework) and will be maintained there.**
+
+
 Liquid Application Framework - Core
 ===================================
 
